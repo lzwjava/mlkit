@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mlkit"
+version = "0.1.0"
+description = "ML, deep learning and LLM algorithms from scratch in pure NumPy, with a CLI"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "mlkit contributors" }]
+dependencies = ["numpy>=1.24"]
+
+[project.scripts]
+mlkit = "mlkit.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["mlkit*"]
